@@ -1,0 +1,145 @@
+
+<html>
+    
+    <head>
+
+    <title>XZ-GEN</title>
+    <link href="style.css" rel="stylesheet" id="bootstrap-css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/hyper.css?v=6.2">
+    <script type="text/javascript" src="" charset="UTF-8"></script><script src="./js/gen.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body >
+	
+  <div class="uk-section uk-section-muted">
+    <div class="uk-container">
+        <div class="uk-container uk-container-xsmall uk-padding-large" style="margin-left: 15px;margin-right: 15px">
+        	
+<form name="console" id="console" role="form" method="POST">
+
+            <center>
+                                    <textarea type="text" placeholder="XXXX-XXXX-XXXX-XXXX" id="lista" class="hyper_ccs uk-textarea uk-border-rounded" rows="5"></textarea>
+                                </center>
+            <br>
+                            <!-- <p class="uk-text-lead uk-text-muted">Warning: don't use generated ccs don't be noob!</p> -->
+              
+<div class="uk-margin-bottom" id="amount_container2">
+                  <div class="uk-form-controls hyper_login">
+                    <input id="ccpN" name="ccp" maxlength="19" type="text" id="inputbin" class="hyper_input uk-input uk-border-rounded" autocomplete="off" placeholder="ENTER BIN (459585)">
+                  </div>
+                </div>
+                
+                                
+                                
+                                
+                                    
+                                    <div class="row">
+                                        <div class="col-6 col-lg-6">
+                                            <div class="form-group">
+                                                <select type="text" name="ccoudatfmt" class="input_text" style="display:none;">
+                          <option value="CHECKER" selected="selected">CHK</option>
+                          <option value="CSV">CSV</option>
+                          <option value="XML">XML</option>
+                          <option value="JSON">JSON</option>
+                        </select>
+                                                <input type="hidden" name="tr" value="2000">
+                                                <input type="hidden" name="L" style="width: 20px" value="1L">
+                                                <div type="hidden" id="bininfo" align="center"></div>
+                                                <div class="row-col">
+                <div class="uk-margin-bottom" id="amount_container" style="margin-right:2px;">
+                  <div class="uk-form-controls hyper_login" style="margin-top: 2px">
+                                                <select id="rx1" type="text" class="form-control" name="emeses">
+                          <option value="rnd">RANDOM MONTH</option>
+                          <option value="01">01 - JAN</option>
+                          <option value="02">02 - FEB</option>
+                          <option value="03">03 - MAR</option>
+                          <option value="04">04 - APR</option>
+                          <option value="05">05 - MAY</option>
+                          <option value="06">06 - JUN</option>
+                          <option value="07">07 - JUL</option>
+                          <option value="08">08 - AUG</option>
+                          <option value="09">09 - SEP</option>
+                          <option value="10">10 - OCT</option>
+                          <option value="11">11 - NOV</option>
+                          <option value="12">12 - DEC</option>
+                        </select>
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-bottom" id="amount_container" style="margin-left:2px;">
+                  <div class="uk-form-controls hyper_login" style="margin-top: 2px">
+                                                <!-- <label class="form-control-label" style="margin-left: 10px;margin-top: 10px;color: white"
+                          for="inputyear">YEAR</label> -->
+                                                <select id="rx2" type="text" class="form-control" name="eyear">
+                          <option value="rnd">RANDOM YEAR</option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                          <option value="2024">2024</option>
+                          <option value="2025">2025</option>
+                          <option value="2026">2026</option>
+                          <option value="2027">2027</option>
+                          <option value="2028">2028</option>
+                          <option value="2029">2029</option>
+                          <option value="2030">2030</option>
+                          <option value="2031">2031</option>
+                        </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="row-col">
+                <div class="uk-margin-bottom" id="amount_container" style="margin-right:2px;">
+                  
+                  <div class="uk-form-controls hyper_login" style="margin-top: 2px">
+            
+                  <div class="uk-form-controls hyper_login">
+                  	<!--cvv-->
+                    <input type="text" id="eccv" name="eccv" class="hyper_input uk-input uk-border-rounded" placeholder="RANDOM CVV" value="">
+                  </div>
+                  </div>
+                </div>
+
+                <div class="uk-margin-bottom" id="amount_container" style="margin-left:2px;">
+                  
+                  <div class="uk-form-controls hyper_login" style="margin-top: 2px">
+                    
+                  <div class="uk-form-controls hyper_login">
+                  	<!--quantity-->
+                  
+                    <input type="number" name="ccghm" class="hyper_input uk-input uk-border-rounded" maxlength="4" placeholder="TOTAL" value="15">
+                    	<select type="text" name="ccnsp" class="input_text" style="display:none;">
+                    	<option selected="selected">None</option>
+                        </select>
+                  </div>
+                  </div>
+                </div>
+                </div>
+                                    
+                                           <button type="button" name="gerar" id="gerar" class="uk-button uk-button-primary uk-border-rounded" style="user-select:none;" >GENERATE</button>
+                                     
+                                </div>
+                            </form>
+                            </div>
+                </div>
+                </div>
+                            
+    <script>
+        window.addEventListener("load", () => {
+            console.log("Event loaded");
+            ccgen();
+        });
+    </script>
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./js/tata.js"></script>
+    <script src="./js/hyper.min.js?v=2.6"></script>
+
+    <footer>
+    </footer>
+</body>
+</html>
